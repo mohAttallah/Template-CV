@@ -1,0 +1,666 @@
+:root {
+    --main-color: #292D3D;
+    --section-color: #EE313E;
+    --section-padding: 30px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*Start Header*/
+header {
+    background-color: var(--main-color);
+    margin: -30px 0 0;
+    height: 190px;
+    padding-top: 50px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    background-color: #EE313E;
+    width: 100%;
+    height: 70px;
+    top: 125px;
+    clip-path: polygon(0 50%, 100% 50%, 100% 0);
+}
+
+header .content {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .content img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    order: -1;
+    border: solid 4px white;
+    border-radius: 100px;
+    outline: 6px solid var(--section-color);
+}
+
+header .content .text  h1 {
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+}
+header .content .text  h5 {
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/*Header for phone */
+@media (max-width: 620px) {
+    header {
+        height: 330px;
+    }
+
+    header::before {
+        top: 266px;
+        clip-path: polygon(0 50%, 100% 50%, 100% 10);
+    }
+
+    header .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .content img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/*End Header*/
+
+/*start Page Content*/
+.page-content {
+    display: grid;
+    max-width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+
+}
+
+/*End Page Content*/
+.profile {
+    background-color: #ddd;
+}
+
+.head-section {
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 300px;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+.head-section i {
+    order: -1;
+    padding-left: 15px;
+    color: #ffff;
+}
+
+.head-section h3 {
+    padding-left: 15px;
+    color: #ffff;
+    text-transform: uppercase;
+}
+
+.profile .container p {
+    font-size: 20px;
+    white-space: 2px;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/*Profile For Phone*/
+@media (max-width: 768px) {
+    .head-section {
+        margin: 0 auto;
+        margin-top: 70px;
+        justify-content: center;
+        border-radius: 150px;
+    }
+
+    .profile .container p {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+/*End Profile*/
+
+/*Start Contact*/
+.contact .container div {
+    padding-top: 40px;
+}
+
+.contact .container h4 {
+    display: inline;
+}
+
+.contact .container a {
+    text-decoration: none;
+    color: black;
+}
+
+/*End Contact*/
+
+/*Start Skills*/
+.skills {}
+
+.skills .container h4,
+.skills .container span {
+    margin-top: 40px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/*Mobile */
+/*small Screens*/
+@media (max-width: 768px) {
+    /*Web Design DESIGN*/
+
+    .skills .container .web-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        right: 20px;
+    }
+
+    .skills .container .web-design .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 40px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .web-design .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 40px;
+        top: -2px;
+    }
+
+    /*Graphic DESIGN*/
+
+    .skills .container .graphic-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        right: 20px;
+    }
+
+    .skills .container .graphic-design .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 20px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .graphic-design .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 20px;
+        top: -2px;
+    }
+
+    /*UI DESIGN*/
+    .skills .container .ui-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        right: 20px;
+    }
+
+    /*Drawing*/
+    .skills .container .drawing .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        right: 20px;
+    }
+
+    .skills .container .drawing .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 50px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .drawing .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 50px;
+        top: -2px;
+    }
+}
+
+
+/*medium Screens*/
+@media (min-width: 768px) {
+
+    .skills .container .web-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 200px;
+    }
+
+    .skills .container .web-design .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 40px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .web-design .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 40px;
+        top: -2px;
+    }
+
+    /*Graphic DESIGN*/
+
+    .skills .container .graphic-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 200px;
+    }
+
+    .skills .container .graphic-design .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 20px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .graphic-design .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 20px;
+        top: -2px;
+    }
+
+    /*UI DESIGN*/
+    .skills .container .ui-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 200px;
+    }
+
+    /*Drawing*/
+    .skills .container .drawing .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 200px;
+    }
+
+    .skills .container .drawing .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 50px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .drawing .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 50px;
+        top: -2px;
+    }
+}
+
+/*large Screens*/
+@media (min-width: 1200px) {
+    .skills .container .web-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 250px;
+    }
+
+    .skills .container .web-design .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 40px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .web-design .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 40px;
+        top: -2px;
+    }
+
+    /*Graphic DESIGN*/
+
+    .skills .container .graphic-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 250px;
+    }
+
+    .skills .container .graphic-design .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 20px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .graphic-design .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 20px;
+        top: -2px;
+    }
+
+    /*UI DESIGN*/
+    .skills .container .ui-design .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 250px;
+    }
+
+    /*Drawing*/
+    .skills .container .drawing .prog {
+        width: 150px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 40px;
+        position: absolute;
+        left: 250px;
+    }
+
+    .skills .container .drawing .prog::before {
+        content: "";
+        position: absolute;
+        width: calc(150px - 50px);
+        height: 15px;
+        background-color: var(--section-color);
+        border-radius: 40px;
+    }
+
+    .skills .container .drawing .prog::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--section-color);
+        border-radius: 100%;
+        right: 50px;
+        top: -2px;
+    }
+}
+/*End skills*/
+/*Start Experiance*/
+.experiance h5{
+    font-size: 20px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.experiance h4::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #292D3D;
+    clip-path: circle(10px);
+    position: absolute;
+    left: 1px;
+}
+.experiance p{
+    text-align: start;
+    line-height: 1.9;
+}
+/*Line*/
+.experiance .head-1::after{
+    content: "";
+    width: 5px;
+    height: 52%;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 7px;
+}
+/*Line for Mobile*/
+@media (max-width: 668px) {
+    .experiance .head-1::after{
+        height: 60%;
+    }
+}
+/*End Experiance*/
+
+
+/*start Eeducation*/
+
+.education  h5{
+    font-size: 20px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.education  h4{
+    position: relative;
+}
+.education  h4::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #292D3D;
+    clip-path: circle(10px);
+    position: absolute;
+    left: -25px;
+}
+.education  p{
+    text-align: start;
+    line-height: 1.9;
+}
+/*Line*/
+.education  .head-1{
+    position: relative;
+}
+
+.education  .head-1::after{
+    content: "";
+    width: 5px;
+    height: 400px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -18px;
+}
+/*Line for Mobile*/
+@media (max-width: 668px) {
+    .education  .head-1::after{
+        height: 500px;
+    }
+}
+/*End education*/
+
+/*Start Language*/
+.language .container .language ul {
+    padding-top: var(--section-padding);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+@media (max-width:678px){
+    .language .container .language ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.language .container .language  li{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 22px;
+    width: 100px;
+    height: 100px;
+    border: var(--main-color) 10px   solid;
+    border-radius: 100%;
+    position: relative;
+    
+}
+.language .container .language  li::before{
+    content: "English";
+    position: absolute;
+    bottom: -60px;
+}
+.language .container .language  li:nth-child(2)::before{
+    content: "Spanish";
+    position: absolute;
+    bottom: -60px;
+}
+.language .container .language  li:nth-child(3)::before{
+    content: "Arabic";
+    position: absolute;
+    bottom: -60px;
+}
+.language .container .language  li:nth-child(1)::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: solid 10px var(--section-color);
+    border-right-color:transparent;
+    border-radius: 50%;
+}
+.language .container .language  li:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: solid 10px var(--section-color);
+    border-right-color:transparent;
+    border-bottom:transparent;
+    border-radius: 50%;
+}
+.language .container .language  li:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: solid 10px var(--section-color);
+    border-radius: 50%;
+}
+@media (max-width:678px){
+    .language .container .language  li:not( li:nth-child(1)){
+        margin-top: 70px;
+    }
+}
+
+.profile, .contact, .skills, .education, .experiance, .language, body{
+    background-color: #ddd;
+}
+/*End Language*/
+
