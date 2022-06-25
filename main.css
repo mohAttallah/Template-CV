@@ -52,6 +52,9 @@ header .content img {
     order: -1;
     border: solid 4px white;
     border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    
     outline: 6px solid var(--section-color);
 }
 
@@ -177,8 +180,6 @@ header .content .text  h5 {
 /*End Contact*/
 
 /*Start Skills*/
-.skills {}
-
 .skills .container h4,
 .skills .container span {
     margin-top: 40px;
@@ -656,6 +657,8 @@ header .content .text  h5 {
 @media (max-width:678px){
     .language .container .language  li:not( li:nth-child(1)){
         margin-top: 70px;
+        -webkit-margin-top:70px;
+        -moz-margin-top:70px;
     }
 }
 
